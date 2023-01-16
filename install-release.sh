@@ -250,7 +250,7 @@ get_version() {
   fi
   RELEASE_LATEST="$(sed 'y/,/\n/' "$TMP_FILE" | grep 'tag_name' | awk -F '"' '{print $4}')"
   "rm" "$TMP_FILE"
-  RELEASE_VERSION="v${RELEASE_LATEST#v}"
+  RELEASE_VERSION="v5.1.0" #"v${RELEASE_LATEST#v}"
   # Compare V2Ray version numbers
   if [[ "$RELEASE_VERSION" != "$CURRENT_VERSION" ]]; then
     RELEASE_VERSIONSION_NUMBER="${RELEASE_VERSION#v}"
